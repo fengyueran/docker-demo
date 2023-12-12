@@ -1,0 +1,12 @@
+{
+  "name": "docker-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:nginx": "docker image build -t xhm-nginx:0.0.1 -f docker-files/nginx-docker-file .",
+    "start:nginx": "docker run -d -p 18084:18084 -v './assets/nginx':/var/www/html --name xhm-nginx-container xhm-nginx"
+  },
+  "author": "",
+  "license": "ISC"
+}
